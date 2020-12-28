@@ -1,6 +1,7 @@
 export const qiankun = {
     // 应用加载之前
     async bootstrap(props: any) {
+        
         console.log('app1 bootstrap', props);
     },
     // 应用 render 之前触发

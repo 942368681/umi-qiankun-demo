@@ -34,7 +34,6 @@ export const qiankun = request('/api/appList', {}).then((res: any) => {
             lifeCycles: {
                 beforeLoad: (props: any) => {
                     console.log(1111111, props);
-                    props.props.aaa = 12;
                 },
                 beforeMount: (props: any) => {
                     console.log(2222222, props);
