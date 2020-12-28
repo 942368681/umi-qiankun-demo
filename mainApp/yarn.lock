@@ -1189,7 +1189,7 @@
     pirates "^4.0.0"
     source-map-support "^0.5.16"
 
-"@babel/runtime@7.12.5", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.8.4":
+"@babel/runtime@7.12.5", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.4.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.12.5"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
@@ -2611,6 +2611,17 @@
   dependencies:
     fast-deep-equal "3.1.1"
 
+"@umijs/plugin-qiankun@^2.18.3":
+  version "2.18.3"
+  resolved "https://registry.npmjs.org/@umijs/plugin-qiankun/-/plugin-qiankun-2.18.3.tgz#0c7fc04fdf632a18ec4d68164795932aa46deb27"
+  integrity sha512-hkZWFY0K/dgXKhUw+950KKgDbfY3i2TAqx5o/jbsYQ4PvJSxAVKxLigGYw9xh3OgiobIoiHcxktoMOXMG1XpqQ==
+  dependencies:
+    "@babel/runtime" "^7.4.5"
+    address "^1.1.2"
+    lodash "^4.17.15"
+    path-to-regexp "^1.7.0"
+    qiankun "^2.2.1"
+
 "@umijs/plugin-request@2.5.2":
   version "2.5.2"
   resolved "https://registry.npmjs.org/@umijs/plugin-request/-/plugin-request-2.5.2.tgz#8fb20654b8b45f4b57a8c0f7829e128c47c0be71"
@@ -3032,7 +3043,7 @@ add-dom-event-listener@^1.1.0:
   dependencies:
     object-assign "4.x"
 
-address@1.1.2:
+address@1.1.2, address@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/address/-/address-1.1.2.tgz#bf1116c9c758c51b7a933d296b72c221ed9428b6"
   integrity sha512-aT6camzM4xEA54YVJYSqxz1kv4IHnQZRtThJJHhUMRExaU5spC7jX5ugSwTaTgJliIgs4VhZOk7htClvQ/LmRA==
@@ -6596,6 +6607,13 @@ import-from@^2.1.0:
   dependencies:
     resolve-from "^3.0.0"
 
+import-html-entry@^1.9.0:
+  version "1.11.0"
+  resolved "https://registry.npmjs.org/import-html-entry/-/import-html-entry-1.11.0.tgz#83626133bb6887cb2c3f7398ff12a47005f6ad7f"
+  integrity sha512-GSnZ68e5ZF0unfRGH3MouN0pzz1y6VVviHyQ/95OSafMPoaLoO5w33BknRbFZ/n4C0hWNkN29Wg5ckLObQsmyA==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+
 import-local@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/import-local/-/import-local-3.0.2.tgz#a8cfd0431d1de4a2199703d003e3e62364fa6db6"
@@ -10102,6 +10120,17 @@ q@^1.1.2:
   resolved "https://registry.npmjs.org/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+qiankun@^2.2.1:
+  version "2.3.5"
+  resolved "https://registry.npmjs.org/qiankun/-/qiankun-2.3.5.tgz#7b9ec35f9592a6b0c8db389ed51239bbaf9cb99b"
+  integrity sha512-1fSXwzvdtUzdRyunLb9dvCsypOsKt2bgJsIPa20Fzy4IDZ67Utg5rIalDBcuTXyIYOw30w1I8yHkxYH9D0uWWg==
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    import-html-entry "^1.9.0"
+    lodash "^4.17.11"
+    single-spa "5.8.1"
+    tslib "^1.10.0"
+
 qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.npmjs.org/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
@@ -11677,6 +11706,11 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+single-spa@5.8.1:
+  version "5.8.1"
+  resolved "https://registry.npmjs.org/single-spa/-/single-spa-5.8.1.tgz#86c2575e297e31d8f06945944ec97e31851a59ae"
+  integrity sha512-RlyLZ1IDIPdzI6mQPzCQnlgTt9jmbAXBZODmifoDut840wksPDSPhcSS8jXMpuUlqOidQiX2YuLVQSR9DEgsXw==
 
 sisteransi@^1.0.5:
   version "1.0.5"
