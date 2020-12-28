@@ -1,5 +1,4 @@
 import request from './utils/request';
-import { useState } from 'react';
 import {
     message
 } from 'antd';
@@ -7,7 +6,7 @@ import { getDvaApp } from 'umi';
 
 export const qiankun = request('/api/appList', {}).then((res: any) => {
     console.log('子应用列表：', res)
-    console.log(3333333, getDvaApp()._store.getState().global)
+    // console.log(3333333, getDvaApp()._store.getState().global)
     if (res && res.data && res.data.list && res.data.list.length) {
         getDvaApp()._store.dispatch({
             type: 'global/registerSubApps',
@@ -57,28 +56,6 @@ export const qiankun = request('/api/appList', {}).then((res: any) => {
     console.log(error);
     message.error('子应用初始化失败');
 });
-/**
- *  修改 clientRender 参数。
-    比如在微前端里动态修改渲染根节点：
- */
-let isSubApp = false;
-export function modifyClientRenderOpts(memo: any) {
-    console.log(memo);
-    return {
-        ...memo,
-        rootElement: isSubApp ? 'sub-root' : memo.rootElement,
-    };
-}
-
-export function onRouteChange({ matchedRoutes }: any) {
-    if (matchedRoutes.length) {
-        document.title = matchedRoutes[matchedRoutes.length - 1].route.title || '';
-    }
-}
-
-export function render(oldRender: Function) {
-    oldRender();
-}
 
 // export function useQiankunStateForSlave() {
 
