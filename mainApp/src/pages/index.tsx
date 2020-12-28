@@ -3,6 +3,7 @@ import { useSelector, Link, useStore, getDvaApp } from 'umi';
 import styles from './index.less';
 
 export default (props: any) => {
+	console.log(11111111, window.SUB_APPS)
 	return (
 		<div>
 			<h1 className={styles.title}>Page index</h1>
