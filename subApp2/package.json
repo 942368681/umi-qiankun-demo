@@ -1,4 +1,5 @@
 {
+  "name": "sub-app2",
   "private": true,
   "scripts": {
     "start": "umi dev",
