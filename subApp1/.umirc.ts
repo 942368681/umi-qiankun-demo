@@ -7,6 +7,10 @@ export default defineConfig({
   routes: [
     { path: '/', component: '@/pages/index' },
   ],
+  dva: {
+    immer: true,
+    hmr: true,
+  },
   qiankun: {
     slave: {}
   }
