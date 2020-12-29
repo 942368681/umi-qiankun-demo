@@ -1,9 +1,12 @@
 import React from 'react';
-import { useSelector, Link, useStore, getDvaApp } from 'umi';
+import { useSelector, Link, useStore, getDvaApp, MicroApp } from 'umi';
 import styles from './index.less';
 
 export default (props: any) => {
-	console.log(11111111, window.SUB_APPS)
+	// console.log(4444444, getDvaApp())
+	// const { subApps } = useSelector((store: any) => ({
+    //     subApps: store.global.subApps,
+    // }));
 	return (
 		<div>
 			<h1 className={styles.title}>Page index</h1>
@@ -13,6 +16,7 @@ export default (props: any) => {
 						return (
 							<li key={item.name}>
 								<Link to={`/${item.name}`}>{item.name}</Link>
+								{/* <MicroApp name={item.name} mainAppProps={getDvaApp()}>{item.name}</MicroApp> */}
 							</li>
 						)
 					})
