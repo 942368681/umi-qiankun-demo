@@ -10,7 +10,7 @@ export default defineConfig({
 			component: '@/layouts/index',
 			routes: [
 				{ path: '/', component: '@/pages/index', exact: true },
-				// { path: '/login', component: '@/pages/login/index', exact: true },
+				{ path: '/login', component: '@/pages/login/index', exact: true },
 			]
 		}
 	],
