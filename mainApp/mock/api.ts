@@ -4,11 +4,13 @@ export default {
         list: [
             {
                 name: 'subApp1',
-                entry: '//192.168.200.18:8001'
+                // entry: '//192.168.200.18:8001'
+                entry: '//localhost:8001'
             },
             {
                 name: 'subApp2',
-                entry: '//192.168.200.18:8002'
+                // entry: '//192.168.200.18:8002'
+                entry: '//localhost:8002'
             }
         ]
     },
