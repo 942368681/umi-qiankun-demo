@@ -1,17 +1,18 @@
 import request from './utils/request';
 import React from 'react';
-import {
-    message
-} from 'antd';
+import { getDvaApp } from 'umi';
+import { message } from 'antd';
 import AppProvider from '@/layouts/AppProvider';
 
 let SUB_APPS = [] as any;
+window.EVENT_BUS = {} as any;
 
 const userInfo = {
     userName: 's',
     token: 123
 };
 window.localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
 
 export const qiankun = request('/api/appList', {}).then((res: any) => {
     console.log('子应用列表：', res)
@@ -20,12 +21,12 @@ export const qiankun = request('/api/appList', {}).then((res: any) => {
         return {
             apps: SUB_APPS.map((item: any) => ({
                 ...item,
-                // props: {
-                //     appName: item.name
-                // }
+                props: {
+                    mainAppEventBus: window.EVENT_BUS
+                }
             })),
             sandbox: true,
-            routes: res.data.list.map((item: any) => ({
+            routes: SUB_APPS.map((item: any) => ({
                 path: `/${item.name}`,
                 microApp: item.name,
                 microAppProps: {

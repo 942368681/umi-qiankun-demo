@@ -4,12 +4,14 @@ import styles from './index.less';
 
 export default (props: any) => {
 	// console.log(4444444, getDvaApp())
-	const { subApps } = useSelector((store: any) => ({
-        subApps: store.global.subApps,
+	const { subApps, title } = useSelector((store: any) => ({
+		subApps: store.mainAppGlobal.subApps,
+		title: store.mainAppGlobal.title
 	}));
 	return (
 		<div>
 			<h1 className={styles.title}>Page index</h1>
+			<h2>{title}</h2>
 			<ul>
 				{
 					subApps.map((item: any) => {

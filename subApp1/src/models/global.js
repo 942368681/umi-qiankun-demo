@@ -1,5 +1,5 @@
 export default {
-    namespace: 'app1',
+    namespace: 'global',
     state: {
         appCode: 'app1',
     },

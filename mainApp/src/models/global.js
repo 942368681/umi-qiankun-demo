@@ -1,7 +1,9 @@
 export default {
-    namespace: 'global',
+    namespace: 'mainAppGlobal',
     state: {
         appCode: 'growth',
+        title: 'mainApp',
+        // 子应用列表
         subApps: [],
         questionTypes: [
             { title: '单选题', value: 'SINGLE_CHOICE' },
@@ -18,8 +20,11 @@ export default {
         objective: ['SINGLE_CHOICE', 'MULTIPLE_CHOICE', 'INDEFINITE_CHOICE', 'JUDGEMENT'],
     },
     reducers: {
-        registerSubApps(state, {apps}) {
+        setSubApps(state, {apps}) {
             state.subApps = apps;
+        },
+        changeTitle(state, {title}) {
+            state.title = title;
         },
     },
     effects: {},
