@@ -4,7 +4,7 @@ import styles from './index.less';
 const BasicLayout: React.FC = (props: any) => {
 
 	return (
-		<div className={styles['app-container']}>
+		<div className={styles['main-app-container']}>
 			{props.children}
 		</div>
 	);

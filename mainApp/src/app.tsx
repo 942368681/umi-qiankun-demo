@@ -1,6 +1,5 @@
 import request from './utils/request';
 import React from 'react';
-import { getDvaApp } from 'umi';
 import { message } from 'antd';
 import AppProvider from '@/layouts/AppProvider';
 
@@ -22,19 +21,19 @@ export const qiankun = request('/api/appList', {}).then((res: any) => {
             apps: SUB_APPS.map((item: any) => ({
                 ...item,
                 props: {
-                    mainAppEventBus: window.EVENT_BUS
+                    
                 }
             })),
             sandbox: true,
-            routes: SUB_APPS.map((item: any) => ({
-                path: `/${item.name}`,
-                microApp: item.name,
-                microAppProps: {
-                    autoSetLoading: true, // 开启微应用的 loading 动画
-                    className: 'micro-container', // 微应用容器 class
-                    wrapperClassName: 'micro-wrapper'  // wrapper class，仅开启 loading 动画时生效
-                }
-            })),
+            // routes: SUB_APPS.map((item: any) => ({
+            //     path: `/subApp/${item.name}`,
+            //     microApp: item.name,
+            //     microAppProps: {
+            //         autoSetLoading: true, // 开启微应用的 loading 动画
+            //         className: 'micro-container', // 微应用容器 class
+            //         wrapperClassName: 'micro-wrapper'  // wrapper class，仅开启 loading 动画时生效
+            //     }
+            // })),
             lifeCycles: {
                 beforeLoad: (props: any) => {
                     // console.log(1111111, props);

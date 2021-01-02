@@ -3,7 +3,7 @@ import styles from './index.less';
 
 export default () => {
   return (
-    <div>
+    <div className={styles['app-container']}>
       <h1 className={styles.title}>subApp2</h1>
     </div>
   );

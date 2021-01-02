@@ -23,14 +23,8 @@ const AppProvider: React.FunctionComponent<IProps> = ({children, subApps}) => {
             history.replace('/login');
         };
     };
-    const test = () => {
-        window.EVENT_BUS['test'] = () => {
-            console.log('ssssssssss')
-        };
-    };
 	return (
-		<div className={styles['app-provider']}>
-            <button onClick={test}>click</button>
+		<div className={styles['global-provider']}>
 			{children}
 		</div>
 	);
