@@ -7,7 +7,7 @@ export default (props: any) => {
   console.log(11111111, window.EVENT_BUS)
   return (
     <div className={styles['app-container']}>
-      <h1 className={styles.title}>subApp1</h1>
+      <h2 className={styles.title}>subApp1</h2>
     </div>
   );
 }
