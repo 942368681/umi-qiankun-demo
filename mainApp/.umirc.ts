@@ -20,30 +20,30 @@ export default defineConfig({
 					exact: true
 				},
 				{
-					path: '/subApp',
+					path: '/subApp/:appName',
 					component: '@/layouts/SubAppProvider',
-					routes: [
-						{
-							path: '/subApp/subApp1',
-							microApp: 'subApp1',
-							exact: true,
-							microAppProps: {
-								autoSetLoading: true,
-								className: 'micro-container',
-								wrapperClassName: 'micro-wrapper',
-							}
-						},
-						{
-							path: '/subApp/subApp2',
-							microApp: 'subApp2',
-							exact: true,
-							microAppProps: {
-								autoSetLoading: true,
-								className: 'micro-container',
-								wrapperClassName: 'micro-wrapper',
-							}
-						},
-					],
+					// routes: [
+					// 	{
+					// 		path: '/subApp/subApp1',
+					// 		microApp: 'subApp1',
+					// 		exact: true,
+					// 		microAppProps: {
+					// 			autoSetLoading: true,
+					// 			className: 'micro-container',
+					// 			wrapperClassName: 'micro-wrapper',
+					// 		}
+					// 	},
+					// 	{
+					// 		path: '/subApp/subApp2',
+					// 		microApp: 'subApp2',
+					// 		exact: true,
+					// 		microAppProps: {
+					// 			autoSetLoading: true,
+					// 			className: 'micro-container',
+					// 			wrapperClassName: 'micro-wrapper',
+					// 		}
+					// 	},
+					// ],
 				}
 			]
 		},

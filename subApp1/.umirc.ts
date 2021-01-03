@@ -5,7 +5,7 @@ export default defineConfig({
     type: 'none',
   },
   routes: [
-    { path: '/', component: '@/pages/index' },
+    { path: '/subApp/subApp1', component: '@/pages/index' },
   ],
   dva: {
     immer: true,
