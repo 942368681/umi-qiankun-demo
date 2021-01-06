@@ -5,6 +5,9 @@ export default {
         title: 'mainApp',
         // 子应用列表
         subApps: [],
+        // 当前挂载的子应用
+        currentMountedSubApp: '',
+        // 试题类型名称，code字典
         questionTypes: [
             { title: '单选题', value: 'SINGLE_CHOICE' },
             { title: '多选题', value: 'MULTIPLE_CHOICE' },
@@ -23,8 +26,8 @@ export default {
         setSubApps(state, {apps}) {
             state.subApps = apps;
         },
-        changeTitle(state, {title}) {
-            state.title = title;
+        setCurrentMountedSubApp(state, {currentMountedSubApp}) {
+            state.currentMountedSubApp = currentMountedSubApp;
         },
     },
     effects: {},

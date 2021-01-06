@@ -1,5 +1,6 @@
 import request from './utils/request';
 import React from 'react';
+import { useSelector, Link, useStore, getDvaApp, history } from 'umi';
 import { message } from 'antd';
 import AppProvider from '@/layouts/AppProvider';
 
@@ -40,12 +41,20 @@ export const qiankun = request('/api/appList', {}).then((res: any) => {
                 },
                 beforeMount: (props: any) => {
                     // console.log(2222222, props);
+                    getDvaApp()._store.dispatch({
+                        type: 'mainAppGlobal/setCurrentMountedSubApp',
+                        currentMountedSubApp: props.name
+                    });
                 },
                 afterMount: (props: any) => {
                     // console.log(3333333, props);
                 },
                 beforeUnmount: (props: any) => {
                     // console.log(4444444, props);
+                    getDvaApp()._store.dispatch({
+                        type: 'mainAppGlobal/setCurrentMountedSubApp',
+                        currentMountedSubApp: ''
+                    });
                 },
                 afterUnmount: (props: any) => {
                     // console.log(5555555, props);

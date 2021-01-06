@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, Link, useStore, getDvaApp } from 'umi';
+import { useSelector, Link, useStore, getDvaApp, history } from 'umi';
 import styles from './index.less';
 
 export default (props: any) => {
@@ -15,7 +15,7 @@ export default (props: any) => {
 					subApps.map((item: any) => {
 						return (
 							<li key={item.name}>
-								<Link to={`/subApp/${item.name}?appName=${item.name}`}>{item.name}</Link>
+								<Link to={`/subApp/${item.name}`}>{item.name}</Link>
 							</li>
 						)
 					})
