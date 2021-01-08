@@ -9,7 +9,7 @@ export default defineConfig({
 		type: 'none',
 	},
 	define: {
-		'process.env.UMI_ENV': 'dev',
+		'process.env.UMI_ENV': 'prod',
 		'process.env.versionTag': new Date().toLocaleString(),
 	},
 	dva: {
@@ -17,6 +17,6 @@ export default defineConfig({
 		hmr: true,
 	},
 	qiankun: {
-		slave: {}
+		master: {}
 	}
 });
