@@ -5,6 +5,7 @@ import theme from './config/theme';
 export default defineConfig({
 	routes,
 	theme,
+	hash: true,
 	nodeModulesTransform: {
 		type: 'none',
 	},
