@@ -1,3 +1,13 @@
 export default [
-    { path: '/', component: '@/pages/index' },
+    {
+        path: '/',
+        component: '@/layouts/index',
+        routes: [
+            {
+                path: '/',
+                component: '@/pages/index',
+                exact: true
+            }
+        ]
+    },
 ];
