@@ -7,15 +7,19 @@ export default defineConfig({
 	theme,
 	hash: true,
 	nodeModulesTransform: {
-		type: 'none',
+		type: 'none'
 	},
 	define: {
-		'process.env.UMI_ENV': 'dev',
-		'process.env.versionTag': new Date().toLocaleString(),
+		'process.env.versionTag': new Date().toLocaleString()
 	},
 	dva: {
 		immer: true,
-		hmr: true,
+		hmr: true
+	},
+	chainWebpack(memo, { webpack }) {
+		memo.plugin('provide-plugin').use(webpack.ProvidePlugin, [{
+			Cookies: 'js-cookie'
+		}]);
 	},
 	qiankun: {
 		slave: {}

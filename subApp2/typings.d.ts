@@ -6,6 +6,7 @@ declare module '*.svg' {
   const url: string
   export default url
 }
+declare const Cookies: any;
 interface Window {
 	[propName: string]: any;
 }
