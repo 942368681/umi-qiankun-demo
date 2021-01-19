@@ -6,6 +6,9 @@ export default defineConfig({
 	routes,
 	theme,
 	hash: true,
+	headScripts: [
+		`https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML`,
+	],
 	nodeModulesTransform: {
 		type: 'none'
 	},
