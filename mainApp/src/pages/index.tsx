@@ -32,7 +32,7 @@ export default (props: any) => {
 	};
 
 	return (
-		<div>
+		<div className={styles['main-app-page']}>
 			<h1 className={styles.title} onClick={openSub}>{title}</h1>
 			<ul>
 				{

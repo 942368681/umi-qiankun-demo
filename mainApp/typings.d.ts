@@ -7,6 +7,8 @@ declare module '*.svg' {
 	export default url
 }
 
+declare module "antd";
+
 declare const Cookies: any;
 
 interface Window {

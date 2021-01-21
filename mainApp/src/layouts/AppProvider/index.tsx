@@ -42,7 +42,7 @@ const AppProvider: React.FunctionComponent<IProps> = ({children, subApps}) => {
     };
 	return (
         <ConfigProvider locale={locale}>
-            <div className={styles['global-provider']}>
+            <div className={styles['main-app-global-provider']}>
                 {children}
             </div>
         </ConfigProvider>

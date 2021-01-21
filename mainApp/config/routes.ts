@@ -7,6 +7,9 @@ export default [
     {
         path: '/',
         component: '@/layouts/index',
+        wrappers: [
+            '@/wrappers/auth',
+        ],
         routes: [
             {
                 path: '/',

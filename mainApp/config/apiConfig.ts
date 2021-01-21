@@ -27,7 +27,7 @@ function getDefaultConfig() {
             wopi = 'https://wopi.eastedu.com';
             break;
         case 'prod':
-            userCenter = 'https://user-api.eastedu.com';
+            userCenter = 'https://userapi.eastedu.com';
             gateway = 'https://gateway.eastedu.com';
             fileService = 'https://api-file.eastedu.com';
             demonstrationClass = 'http://api.res.fcr.eastedu.com';
@@ -50,7 +50,7 @@ function getDefaultConfig() {
         demonstrationClass,
         tracker,
         wopi
-    };
+    } as any;
 }
 
 export default defaultConfig;
