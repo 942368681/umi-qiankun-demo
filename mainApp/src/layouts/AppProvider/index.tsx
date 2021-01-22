@@ -18,13 +18,13 @@ const AppProvider: React.FunctionComponent<IProps> = ({children, subApps}) => {
         initEventBus();
     }, []);
     const initEventBus = () => {
-        window.EVENT_BUS['getMainAppGlobalState'] = () => {
+        window.GLOBAL_EVENT['getMainAppGlobalState'] = () => {
             return getDvaApp();
         };
-        window.EVENT_BUS['goBackToLogin'] = () => {
+        window.GLOBAL_EVENT['goBackToLogin'] = () => {
             history.replace('/login');
         };
-        window.EVENT_BUS['navigateToSubPage'] = (page: string) => {
+        window.GLOBAL_EVENT['navigateToSubPage'] = (page: string) => {
             let routeUrl = ''
             switch (page) {
                 case 'a':

@@ -5,7 +5,7 @@ import { Link } from 'umi';
 export default (props: any) => {
   const logout = () => {
     try {
-      window.EVENT_BUS.goBackToLogin();
+      window.GLOBAL_EVENT.goBackToLogin();
     } catch (error) {
       console.log('主应用未挂载');
     }

@@ -10,7 +10,7 @@ message.config({
 });
 
 let SUB_APPS = [] as any;
-window.EVENT_BUS = {} as any;
+window.GLOBAL_EVENT = {} as any;
 
 export const qiankun = request('/api/appList', { useOwnUrl: true }).then((res: any) => {
     console.log('子应用列表：', res);
